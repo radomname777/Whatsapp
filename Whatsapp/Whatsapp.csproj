@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="3ed928f12b97e2cbcd41234bbdf7ee13.png" />
+    <None Remove="attach-icon-png.png" />
+    <None Remove="attach-icon.png" />
+    <None Remove="how-change-whatsapp-E015A5.jpeg" />
+    <None Remove="smile.png" />
+    <None Remove="Whatsap.png.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="3ed928f12b97e2cbcd41234bbdf7ee13.png" />
+    <Resource Include="attach-icon-png.png" />
+    <Resource Include="attach-icon.png" />
+    <Resource Include="how-change-whatsapp-E015A5.jpeg" />
+    <Resource Include="smile.png" />
+    <Resource Include="Whatsap.png.jpg" />
+  </ItemGroup>
+
+</Project>
