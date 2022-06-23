@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Whatsapp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="400">
+        Title="MainWindow" Height="650" Width="380">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Whatsap.png.jpg"/>
@@ -25,24 +25,54 @@
                 <ImageBrush/>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
+                <RowDefinition Height="13*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="1">
-                <TextBlock  Height="40" Width="265" HorizontalAlignment="Left" Margin ="40,7,0,7" Background="White" Foreground="#FFC5C5C5" FontSize="22" FontWeight="Normal">Type a message</TextBlock>
-                <Button Height="40" Width="40" HorizontalAlignment="Left" BorderBrush="White" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox  Grid.Column="2" Background="White" Foreground="#FFC5C5C5" FontSize="22" FontWeight="Normal">Type a message</TextBox>
+
+                <Button  Grid.Column="1" BorderBrush="White" >
                     <Button.Background>
                         <ImageBrush ImageSource="/smile.png"/>
                     </Button.Background>
                 </Button>
-                <Button Height="40" Width="40" HorizontalAlignment="Left" BorderBrush="White" Margin="305,7,0,7" >
+
+                <Button Grid.Column="3"  BorderBrush="red">
                     <Button.Background>
                         <ImageBrush ImageSource="/attach-icon-png.png"/>
                     </Button.Background>
                 </Button>
-                <Button Height="40" Width="40" HorizontalAlignment="Left" BorderBrush="White" Margin="345,7,0,7" >
+                <Button  Grid.Column="4" BorderBrush="White">
                     <Button.Background>
                         <ImageBrush ImageSource="/3ed928f12b97e2cbcd41234bbdf7ee13.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Grid.Column="6" >
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="100"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/whatsapp-send-voice-message-vector-260nw-787086673.png">
+                            <ImageBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.2" ScaleY="1.2"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
                     </Button.Background>
                 </Button>
             </Grid>

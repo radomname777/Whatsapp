@@ -11,18 +11,22 @@
     <None Remove="3ed928f12b97e2cbcd41234bbdf7ee13.png" />
     <None Remove="attach-icon-png.png" />
     <None Remove="attach-icon.png" />
+    <None Remove="HD-wallpaper-whatsapp-app-fondo-sms-verde-wall-whatsapp.jpg" />
     <None Remove="how-change-whatsapp-E015A5.jpeg" />
     <None Remove="smile.png" />
     <None Remove="Whatsap.png.jpg" />
+    <None Remove="whatsapp-send-voice-message-vector-260nw-787086673.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="3ed928f12b97e2cbcd41234bbdf7ee13.png" />
     <Resource Include="attach-icon-png.png" />
     <Resource Include="attach-icon.png" />
+    <Resource Include="HD-wallpaper-whatsapp-app-fondo-sms-verde-wall-whatsapp.jpg" />
     <Resource Include="how-change-whatsapp-E015A5.jpeg" />
     <Resource Include="smile.png" />
     <Resource Include="Whatsap.png.jpg" />
+    <Resource Include="whatsapp-send-voice-message-vector-260nw-787086673.png" />
   </ItemGroup>
 
 </Project>
