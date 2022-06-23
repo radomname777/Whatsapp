@@ -14,8 +14,13 @@
     <None Remove="HD-wallpaper-whatsapp-app-fondo-sms-verde-wall-whatsapp.jpg" />
     <None Remove="how-change-whatsapp-E015A5.jpeg" />
     <None Remove="smile.png" />
+    <None Remove="t.png" />
     <None Remove="Whatsap.png.jpg" />
     <None Remove="whatsapp-send-voice-message-vector-260nw-787086673.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +30,7 @@
     <Resource Include="HD-wallpaper-whatsapp-app-fondo-sms-verde-wall-whatsapp.jpg" />
     <Resource Include="how-change-whatsapp-E015A5.jpeg" />
     <Resource Include="smile.png" />
+    <Resource Include="t.png" />
     <Resource Include="Whatsap.png.jpg" />
     <Resource Include="whatsapp-send-voice-message-vector-260nw-787086673.png" />
   </ItemGroup>

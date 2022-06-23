@@ -12,13 +12,49 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
+
+
+        <Image Width="30" Height="30"   StretchDirection="UpOnly">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/3ed928f12b97e2cbcd41234bbdf7ee13.png"/>
+            </Image.OpacityMask>
+        </Image>
         <Grid Name="User" Grid.Row="0" Background="#FF075D54">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="153*"/>
-                <ColumnDefinition Width="47*"/>
-            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Button HorizontalAlignment="Left" Margin="0,10,0,0" Height="40" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/t.png"/>
+                    </Button.Background>
+
+                </Button>
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Margin="40,-55,0,0"  Height="59" Width="257" HorizontalAlignment="Left" ItemsSource="{Binding People}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Visibility="Visible" Margin="0,-5,0,0" HorizontalAlignment="Left"  Source="{Binding ImageUrl}" Height="65" Width="70">
+                                    <Image.OpacityMask>
+                                        <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                            <GradientStop Color="#ffffffff" Offset="0.6" />
+                                            <GradientStop Color="#00ffffff" Offset="0.8" />
+                                        </RadialGradientBrush>
+                                    </Image.OpacityMask>
+                                </Image>
+                                <Label Grid.Column="1" Content="{Binding Nickname}" Foreground="Wheat"></Label>
+                            </Grid>
+                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.Background>
@@ -35,7 +71,7 @@
                     </StackPanel>
                 </Grid>
             </ScrollViewer>
-           
+
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
@@ -49,11 +85,10 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox PreviewKeyDown="TXTBOX_PreviewKeyDown" MouseLeave="TXTBOX_MouseLeave" MouseEnter="TXTBOX_MouseEnter" Name="TXTBOX" Grid.Column="2" Background="White" Foreground="#FFC5C5C5" FontSize="22" FontWeight="Normal">Type a message</TextBox>
-
                 <Button  Grid.Column="1" BorderBrush="White" >
                     <Button.Background>
                         <ImageBrush ImageSource="/smile.png"/>
-                        
+
                     </Button.Background>
                 </Button>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bogus;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,15 @@ namespace Whatsapp
     public partial class MainWindow : Window
     {
         private bool isok { get; set; } = true;
-        bool isokay = true;
+        public List<Human> People { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+            People = new Faker<Human>()
+                .RuleFor(h => h.Nickname, f => f.Person.FirstName)
+                .RuleFor(h=> h.ImageUrl,f=>f.Person.Avatar)
+                .Generate(1);
         }
         private Label Label()
         {
@@ -62,12 +68,16 @@ namespace Whatsapp
             MSGR.Children.Add(B);
             SV.ScrollToBottom();
             Fun();
+            
+            
+            
         }
         private void TextBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
             
             
         }
+         private bool isokay = true;
         private void Fun2()
         {
             TXTBOX.Text = "";
@@ -76,23 +86,17 @@ namespace Whatsapp
         private void TXTBOX_MouseEnter(object sender, MouseEventArgs e) { Fun2(); }
         private void Fun()
         {
-            
                 TXTBOX.Text = "Type a message";
                 TXTBOX.Foreground = new SolidColorBrush(Color.FromRgb(197, 197, 197));
                 isokay = true;
-            
         }
-        private void TXTBOX_MouseLeave(object sender, MouseEventArgs e)
-        {
-            if (TXTBOX.Text.Length==0)Fun();
-        }
-
+        private void TXTBOX_MouseLeave(object sender, MouseEventArgs e){ Fun(); }
         private void TXTBOX_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
-            if (e.Key == Key.Enter && TXTBOX.Text.Length > 0) AddMessage();
-            else if (TXTBOX.Text.Length == 0) { TXTBOX.Text = "Type a message"; }
-            else if (isokay) { TXTBOX.Text = ""; Fun2(); isokay = false; }
+            if (isokay) { TXTBOX.Text = ""; isokay = false; }
+            else if (e.Key == Key.Enter && TXTBOX.Text.Length > 0) AddMessage();
+           
         }
     }
 }
