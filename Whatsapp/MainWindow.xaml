@@ -45,13 +45,24 @@
                                         </RadialGradientBrush>
                                     </Image.OpacityMask>
                                 </Image>
-                                <Label Grid.Column="1" Content="{Binding Nickname}" Foreground="Wheat"></Label>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="10*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label  Grid.Row="0" Content="{Binding Nickname}" Foreground="White" FontSize="21"></Label>
+                                    <Label Grid.Row="1" Margin="0,-10,0,0" Content="Online" Foreground="White" FontSize="14"></Label>
+                                </Grid>
                             </Grid>
-                            
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
+                <Button Width="40" Height="35" Margin="300,-50,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/dots-icon-17.png"/>
+                    </Button.Background>
+                </Button>
 
 
             </StackPanel>
@@ -84,23 +95,33 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox PreviewKeyDown="TXTBOX_PreviewKeyDown" MouseLeave="TXTBOX_MouseLeave" MouseEnter="TXTBOX_MouseEnter" Name="TXTBOX" Grid.Column="2" Background="White" Foreground="#FFC5C5C5" FontSize="22" FontWeight="Normal">Type a message</TextBox>
-                <Button  Grid.Column="1" BorderBrush="White" >
+                <TextBox PreviewKeyDown="TXTBOX_PreviewKeyDown" MouseLeave="TXTBOX_MouseLeave" MouseEnter="TXTBOX_MouseEnter" Name="TXTBOX" Grid.Column="1" Background="White" Foreground="#FFC5C5C5" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="3" Margin="34,0,38,0">Type a message</TextBox>
+                <Button BorderBrush="White" Foreground="{x:Null}" Grid.ColumnSpan="2" Margin="12,0,1,0" >
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10,0,0,10"/>
+                        </Style>
+                    </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/smile.png"/>
-
+                        <ImageBrush ImageSource="/happy-icon-2.png"/>
                     </Button.Background>
                 </Button>
 
-                <Button Grid.Column="3"  BorderBrush="red">
+                <Button Grid.Column="3"  BorderBrush="White">
                     <Button.Background>
                         <ImageBrush ImageSource="/attach-icon-png.png"/>
                     </Button.Background>
                 </Button>
                 <Button  Grid.Column="4" BorderBrush="White">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="0,0,20,0"/>
+                        </Style>
+                    </Button.Resources>
                     <Button.Background>
                         <ImageBrush ImageSource="/3ed928f12b97e2cbcd41234bbdf7ee13.png"/>
                     </Button.Background>
+
                 </Button>
                 <Button Grid.Column="6" >
                     <Button.Resources>

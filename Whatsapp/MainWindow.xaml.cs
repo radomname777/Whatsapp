@@ -94,7 +94,7 @@ namespace Whatsapp
         private void TXTBOX_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
-            if (isokay) { TXTBOX.Text = ""; isokay = false; }
+            if (isokay) { TXTBOX.Text = ""; isokay = false; TXTBOX.Foreground = new SolidColorBrush(Colors.Black); }
             else if (e.Key == Key.Enter && TXTBOX.Text.Length > 0) AddMessage();
            
         }

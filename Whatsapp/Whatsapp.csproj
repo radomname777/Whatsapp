@@ -11,6 +11,9 @@
     <None Remove="3ed928f12b97e2cbcd41234bbdf7ee13.png" />
     <None Remove="attach-icon-png.png" />
     <None Remove="attach-icon.png" />
+    <None Remove="dots-icon-17.jpg" />
+    <None Remove="dots-icon-17.png" />
+    <None Remove="happy-icon-2.png" />
     <None Remove="HD-wallpaper-whatsapp-app-fondo-sms-verde-wall-whatsapp.jpg" />
     <None Remove="how-change-whatsapp-E015A5.jpeg" />
     <None Remove="smile.png" />
@@ -27,6 +30,9 @@
     <Resource Include="3ed928f12b97e2cbcd41234bbdf7ee13.png" />
     <Resource Include="attach-icon-png.png" />
     <Resource Include="attach-icon.png" />
+    <Resource Include="dots-icon-17.jpg" />
+    <Resource Include="dots-icon-17.png" />
+    <Resource Include="happy-icon-2.png" />
     <Resource Include="HD-wallpaper-whatsapp-app-fondo-sms-verde-wall-whatsapp.jpg" />
     <Resource Include="how-change-whatsapp-E015A5.jpeg" />
     <Resource Include="smile.png" />
